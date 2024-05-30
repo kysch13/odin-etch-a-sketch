@@ -1,0 +1,14 @@
+#sketch-container {
+    margin: 20px auto;
+    width: 80vw;
+    border: 5px solid #eaeaea;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sketch-tile {
+    height: 0;
+    background-color: #b4b4b0;
+    outline: 1px solid #b4b4b0;
+    cursor: crosshair;
+}
