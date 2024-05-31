@@ -8,9 +8,42 @@
     <script src="etch-a-sketch.js" defer></script>
 </head>
 <body>
-    <div id="sketch-container">
-
+    <div class="controls">
+        <div class="rainbow-toggle">
+            <span class="rainbow-label"><strong>Rainbow Mode</strong></span>
+            <form autocomplete="off">
+                <label class="switch">
+                    <input id="rainbow-switch" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </form>
+            
+        </div>
+        <div class="darken-toggle">
+            <span class="darken-label"><strong>Darken Mode</strong></span>
+            <form autocomplete="off">
+                <label class="switch">
+                    <input id="darken-switch" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </form>
+            
+        </div>
+        <button id="new-grid" type="button">New Grid</button>
     </div>
+    <div class="sketch-outer">
+        <div class="logo">
+            <img src="etch-a-sketch-logo.png" alt="Etch-a-Sketch">
+        </div>
+        <div id="sketch-container">
+
+        </div>
+        <div class="knobs">
+            <div class="knob"></div>
+            <div class="knob"></div>
+        </div>
+    </div>
+    
     
 </body>
 </html>

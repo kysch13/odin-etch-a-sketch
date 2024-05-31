@@ -1,14 +1,174 @@
-#sketch-container {
+body {
+    background: radial-gradient(#333, #000);
+}
+
+.controls {
+    width: 500px;
+    background-color: #333;
+    border-radius: 10px;
+    margin: 15px auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rainbow-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rainbow-label {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 27px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ddd;
+    border: 1px solid #333;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 20px;
+    border: 1px solid #000;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 2px;
+    background-color: #fff;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+    filter: drop-shadow(0 2px #00000033);
+    border: 1px solid #00000033;
+}
+
+.rainbow-toggle input:checked + .slider {
+    background: linear-gradient(135deg, red 10%, orange, yellow, green, blue, indigo, rgb(63, 0, 63) 70%);
+
+}
+
+.darken-toggle input:checked + .slider {
+    background: linear-gradient(135deg, #333 10%, #111 70%);
+
+}
+
+
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.darken-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.darken-label {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+#new-grid {
+    background: #92e0ff;
+    color: #074577;
+    border: 0;
+    outline: 0;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    filter: drop-shadow(0 2px 1px #111);
+}
+
+#new-grid:hover {
+    background: #d0f2ff;
+    color: #2068a3;
+}
+
+.logo {
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.logo > img {
+    width: 60%;
+    filter: drop-shadow(0 2px 1px #3337) drop-shadow(0 -2px 1px #fff5);
+    opacity: 0.9;
+}
+
+.sketch-outer {
+    background: radial-gradient(#c00 60%, rgb(165, 0, 0));
+    border-radius: 20px;
+    width: 500px;
     margin: 20px auto;
-    width: 80vw;
-    border: 5px solid #eaeaea;
+    border-bottom: 5px solid rgb(165, 0, 0);
+    border-top: 5px solid #fd404077;
+    filter: drop-shadow(0 3px 20px #000);
+}
+
+.knobs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px auto;
+    height: 100%;
+    padding: 0 10px;
+}
+
+.knob {
+    width: 75px;
+    height: 0;
+    padding-top: 69px;
+    background: conic-gradient(#ddd, #fff, #ddd);
+    border-radius: 120px;
+    border-bottom: 4px solid #8b8b8b;
+    border-top: 4px solid #ffffff;
+    filter: drop-shadow(0 2px 2px #33333333);
+}
+
+#sketch-container {
+    border: 3px solid rgb(151, 0, 0);
     display: flex;
     flex-wrap: wrap;
+    margin: 0 63px;
+    background-color: #b4b4b0;
 }
 
 .sketch-tile {
     height: 0;
     background-color: #b4b4b0;
-    outline: 1px solid #b4b4b0;
+    outline: 1px solid #a7a7a2;
     cursor: crosshair;
+    opacity: 1;
 }
